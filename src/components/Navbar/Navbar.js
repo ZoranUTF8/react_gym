@@ -1,29 +1,73 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Stack } from "@mui/material";
+import { useState } from "react";
 import Logo from "../../images/Logo.png";
-import "./style.css";
+import { Link as RouterLink } from "react-router-dom";
+import { Box, Typography, Stack, Link } from "@mui/material";
+import AdbIcon from "@mui/icons-material/Adb";
+import MenuIcon from "@mui/icons-material/Menu";
+import { styled } from "@mui/material/styles";
+import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 
 const Navbar = () => {
+  const MobileUserBox = styled(Box)(({ theme }) => ({
+    display: "flex",
+    width: " 100%",
+    justifyContent: "space-between",
+    alignItems: "center",
+    //? If its small or biggert than small
+    [theme.breakpoints.up("md")]: {
+      display: "none",
+    },
+  }));
+
   return (
     <Stack
       direction="row"
+      alignItems="center"
       justifyContent="space-around"
       sx={{
-        gap: { sm: "122px", xs: "48px" },
+        gap: { sm: "50px", xs: "40px" },
         mt: { sm: "32px", xs: "20px" },
         justifyContent: "none",
       }}
-      px="10px"
+      px="20px"
     >
-      <Link to={"/"}>
-        <img src={Logo} alt="logo" className="logoImg" />
+      <Link component={RouterLink} to="/pocetna" underline="hover">
+        <FitnessCenterIcon fontSize="large" />
       </Link>
-      <Stack direction="row" className="main_links">
-        <Link to={"/"} className="pocetna_link">
-          Početna
+      <Typography
+        variant="h5"
+        noWrap
+        sx={{
+          mr: 2,
+          display: { sm: "none", md: "block" },
+          fontFamily: "monospace",
+          fontWeight: 700,
+          letterSpacing: ".3rem",
+          color: "inherit",
+          textDecoration: "none",
+        }}
+      >
+        Moja Teretana
+      </Typography>
+
+      <Stack direction="row" gap="40px" fontFamily="Alegreya" fontSize="24px">
+        <Link
+          component={RouterLink}
+          to="/pocetna"
+          underline="hover"
+          style={{
+            textDecoration: "none",
+            color: "#3A1212",
+          }}
+        >
+          Pocetna
         </Link>
-        <a href="#vjezbe">Vjezbe</a>
+        <a
+          href="#exercises"
+          style={{ textDecoration: "none", color: "#3A1212" }}
+        >
+          Exercises
+        </a>
       </Stack>
     </Stack>
   );

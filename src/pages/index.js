@@ -1,4 +1,6 @@
-import SingleExercise from "./SingleExercise";
-import Home from "./Home";
+import SingleExercise from "./SingleExercise/SingleExercise";
+import Home from "./Home/Home";
+import Contact from "./Contact/Contact";
+import RandomExercises from "./RandomExercises/RandomExercises";
 
-export { SingleExercise, Home };
+export { SingleExercise, Home, Contact, RandomExercises };

@@ -3,15 +3,17 @@ import { Route, Routes } from "react-router-dom";
 import { Box } from "@mui/material";
 
 import "./App.css";
-import { SingleExercise, Home } from "./pages";
+import { SingleExercise, Home, Contact, RandomExercises } from "./pages";
 import { Navbar, Footer } from "./components";
 
 const App = () => (
-  <Box width="400px" sx={{ width: { xl: "1488px" } }} m="auto">
+  <Box>
     <Navbar />
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="vjezba/:id" element={<SingleExercise />} />
+      <Route path="pocetna" element={<Home />} />
+      <Route path="kontakt" element={<Contact />} />
+      <Route path="vjezbe" element={<RandomExercises />} />
+      <Route path="vjezbe/:id" element={<SingleExercise />} />
       <Route
         path="*"
         element={
