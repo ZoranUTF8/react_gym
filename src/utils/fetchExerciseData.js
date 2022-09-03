@@ -18,6 +18,6 @@ export const fetchExerciseData = async (url, options) => {
     return data;
   } else {
     console.log(response);
-    alert("Error getting exercise data, please try later.");
+    alert("Greška pri dobijanju podataka o vežbi, molimo vas pokušajte kasnije.");
   }
 };

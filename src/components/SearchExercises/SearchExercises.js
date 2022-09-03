@@ -5,10 +5,10 @@ import {
   options,
   fetchExerciseData,
 } from "../../utils/fetchExerciseData";
+import HorizontalScrollbar from "../HorizontalScrollbar/HorizontalScrollbar";
 
-const SearchExercises = () => {
+const SearchExercises = ({ setFoundExercises, bodyPart, setBodyPart }) => {
   const [searchValue, setSearchValue] = useState("");
-  const [foundExercises, setFoundExercises] = useState([]);
   const [bodyParts, setBodyParts] = useState([]);
 
   const handleSearch = async () => {
@@ -87,6 +87,13 @@ const SearchExercises = () => {
         >
           Traži
         </Button>
+        <Box>
+          <HorizontalScrollbar
+            bodyPartData={bodyParts}
+            bodyPart={bodyPart}
+            setBodyPart={setBodyPart}
+          />
+        </Box>
       </Box>
     </Stack>
   );
