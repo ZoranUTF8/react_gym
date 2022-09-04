@@ -26,23 +26,24 @@ const RightArrow = () => {
 };
 
 const HorizontalScrollbar = ({ bodyPartData, bodyPart, setBodyPart }) => {
-    
-  <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
-    {bodyPartData.map((item) => (
-      <Box
-        key={item.id || item}
-        itemId={item.id || item}
-        title={item.id || item}
-        m="0 40px"
-      >
-        <BodyPartCard
-          item={item}
-          setBodyPart={setBodyPart}
-          bodyPart={bodyPart}
-        />
-      </Box>
-    ))}
-  </ScrollMenu>;
+  return (
+    <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
+      {bodyPartData.map((item) => (
+        <Box
+          key={item.id || item}
+          itemId={item.id || item}
+          title={item.id || item}
+          m="0 40px"
+        >
+          <BodyPartCard
+            item={item}
+            setBodyPart={setBodyPart}
+            bodyPart={bodyPart}
+          />
+        </Box>
+      ))}
+    </ScrollMenu>
+  );
 };
 
 export default HorizontalScrollbar;

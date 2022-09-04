@@ -1,41 +1,28 @@
 import { Stack, Typography } from "@mui/material";
-import TurnedInIcon from "@mui/icons-material/TurnedIn";
 import Icon from "../../icons/gym.png";
-import { border, borderTop } from "@mui/system";
 
 const BodyPartCard = ({ item, bodyPart, setBodyPart }) => {
-    console.log(item)
   return (
     <Stack
       type="button"
       alignItems="center"
       justifyContent="center"
       className="bodyPart-card"
-      sx={
-        bodyPart === item
-          ? {
-              borderTop: "4px solid #FF2625",
-              background: "#fff",
-              borderBottomLeftRadius: "20px",
-              width: "270px",
-              height: "282px",
-              cursor: "pointer",
-              gap: "47px",
-            }
-          : {
-              background: "#fff",
-              borderBottomLeftRadius: "20px",
-              width: "270px",
-              height: "282px",
-              cursor: "pointer",
-              gap: "47px",
-            }
-      }
+      sx={{
+        borderTop: bodyPart === item ? "4px solid #4a3dfb" : "",
+        background: "#fff",
+        borderBottomLeftRadius: "20px",
+        width: "270px",
+        height: "282px",
+        cursor: "pointer",
+        gap: "47px",
+      }}
       onClick={() => {
         setBodyPart(item);
         window.scrollTo({ top: 1800, left: 100, behavior: "smooth" });
       }}
     >
+    {/* //! Change image for specific part icon */}
       <img
         src={Icon}
         alt="dumbbell"
@@ -45,7 +32,7 @@ const BodyPartCard = ({ item, bodyPart, setBodyPart }) => {
         fontSize="24px"
         fontWeight="bold"
         fontFamily="Alegreya"
-        color="#3A1212"
+        color="#000000"
         textTransform="capitalize"
       >
         {item}

@@ -87,13 +87,13 @@ const SearchExercises = ({ setFoundExercises, bodyPart, setBodyPart }) => {
         >
           Traži
         </Button>
-        <Box>
-          <HorizontalScrollbar
-            bodyPartData={bodyParts}
-            bodyPart={bodyPart}
-            setBodyPart={setBodyPart}
-          />
-        </Box>
+      </Box>
+      <Box mt={3} sx={{ width: "100%", p: "20px" }}>
+        <HorizontalScrollbar
+          bodyPartData={bodyParts}
+          bodyPart={bodyPart}
+          setBodyPart={setBodyPart}
+        />
       </Box>
     </Stack>
   );

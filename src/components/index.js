@@ -5,6 +5,7 @@ import HeroBanner from "./HeroBanner/HeroBanner";
 import SearchExercises from "./SearchExercises/SearchExercises";
 import HorizontalScrollbar from "./HorizontalScrollbar/HorizontalScrollbar";
 import BodyPartCard from "./BodyPartCard/BodyPartCard";
+import SingleExerciseCard from "./SingleExerciseCard/SingleExerciseCard";
 
 export {
   Navbar,
@@ -14,4 +15,5 @@ export {
   SearchExercises,
   HorizontalScrollbar,
   BodyPartCard,
+  SingleExerciseCard,
 };
