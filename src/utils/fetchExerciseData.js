@@ -10,6 +10,14 @@ export const options = {
   },
 };
 
+export const optionsYoutube = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": "7e131168d4msh54ab90500b6f1bcp15726cjsnc6e46468f422",
+    "X-RapidAPI-Host": "youtube-search-and-download.p.rapidapi.com",
+  },
+};
+
 export const fetchExerciseData = async (url, options) => {
   const response = await fetch(url, options);
 
@@ -18,6 +26,8 @@ export const fetchExerciseData = async (url, options) => {
     return data;
   } else {
     console.log(response);
-    alert("Greška pri dobijanju podataka o vežbi, molimo vas pokušajte kasnije.");
+    alert(
+      "Greška pri dobijanju podataka o vežbi, molimo vas pokušajte kasnije."
+    );
   }
 };

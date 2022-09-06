@@ -31,7 +31,7 @@ const Navbar = () => {
       }}
       px="20px"
     >
-      <Link component={RouterLink} to="/pocetna" underline="hover">
+      <Link component={RouterLink} to="/" underline="hover">
         <FitnessCenterIcon fontSize="large" />
       </Link>
       <Typography
@@ -53,7 +53,7 @@ const Navbar = () => {
       <Stack direction="row" gap="40px" fontFamily="Alegreya" fontSize="24px">
         <Link
           component={RouterLink}
-          to="/pocetna"
+          to="/"
           underline="hover"
           style={{
             textDecoration: "none",

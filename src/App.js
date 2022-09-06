@@ -10,7 +10,7 @@ const App = () => (
   <Box>
     <Navbar />
     <Routes>
-      <Route path="pocetna" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="kontakt" element={<Contact />} />
       <Route path="vjezbe" element={<RandomExercises />} />
       <Route path="vjezbe/:id" element={<SingleExercise />} />
