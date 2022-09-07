@@ -9,6 +9,7 @@ import SingleExerciseCard from "./SingleExerciseCard/SingleExerciseCard";
 import Details from "./Details/Details";
 import SimilarExercises from "./SimilarExercises/SimilarExercises";
 import ExerciseVideos from "./ExerciseVideos/ExerciseVideos";
+import Loader from "./Loader/Loader";
 
 export {
   Navbar,
@@ -22,4 +23,5 @@ export {
   Details,
   SimilarExercises,
   ExerciseVideos,
+  Loader,
 };
